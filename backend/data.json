@@ -1,0 +1,48 @@
+{
+  "assignments": [
+    {
+      "id": 1777217592398,
+      "title": " web app video presentation",
+      "course": "CSE309",
+      "deadline": "2026-04-26",
+      "completed": false
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1777217230616,
+      "text": "DBMS Assignment ",
+      "course": "CSE303",
+      "completed": false
+    },
+    {
+      "id": 1777217274320,
+      "text": "web app SRS submission",
+      "course": "CSE309",
+      "completed": true
+    }
+  ],
+  "materials": [
+    {
+      "id": 1777217327144,
+      "title": "assignment ",
+      "course": "E2",
+      "fileName": "8e474a027aee10107e3f0b6236466378",
+      "originalName": "Assignment 1.pdf",
+      "uploadedAt": "2026-04-26"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1777217592399,
+      "message": "New assignment added:  web app video presentation",
+      "read": false
+    }
+  ],
+  "profile": {
+    "name": "Mehnaj Akter",
+    "id": "2222624",
+    "email": "mehnajakter183@gmail.com",
+    "department": "CSE"
+  }
+}
