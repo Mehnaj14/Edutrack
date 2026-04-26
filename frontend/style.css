@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #1e293b;
+  color: white;
+  position: fixed;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 28px;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  background: #334155;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background: #3b82f6;
+}
+
+.main {
+  margin-left: 260px;
+  padding: 25px;
+}
+
+.navbar {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.navbar input {
+  width: 420px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.navbar button {
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  min-height: 150px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.panel, .search-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.hidden {
+  display: none;
+}
+
+input, button {
+  padding: 10px;
+  margin: 6px;
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.progress-bg {
+  width: 100%;
+  height: 14px;
+  background: #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #22c55e;
+}
