@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api";
+const API = "https://edutrack-56bi.onrender.com/api";
 
 function showPage(id) {
   document.querySelectorAll(".page").forEach(page => {
