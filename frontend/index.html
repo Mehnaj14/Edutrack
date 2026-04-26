@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EduTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>EduTrack</h2>
+  <button onclick="showPage('dashboard')">Dashboard</button>
+  <button onclick="showPage('tasks')">Study planner</button>
+  <button onclick="showPage('assignments')">Assignments</button>
+  <button onclick="showPage('materials')">Materials</button>
+  <button onclick="showPage('profile')">Profile</button>
+  <button onclick="showPage('settings')">Settings</button>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<div class="main">
+  <div class="navbar">
+    <input id="searchInput" placeholder="Search assignments or materials..." oninput="searchData()">
+    <button onclick="showPage('notifications')">🔔 Notifications</button>
+    <button onclick="showPage('profile')">👤 Profile</button>
+    <button onclick="showPage('signin')">Sign In</button>
+  </div>
+
+  <div id="dashboard" class="page">
+    <h1>Dashboard</h1>
+
+    <div id="searchResults" class="panel hidden"></div>
+
+    <div class="card-grid">
+      <div class="card" onclick="showPendingAssignments()">
+        <h3>Pending Assignments</h3>
+        <p id="pendingCount">2</p>
+      </div>
+
+      <div class="card" onclick="showPage('tasks')">
+        <h3>Study Tasks</h3>
+        <p id="taskCount">5</p>
+      </div>
+
+      <div class="card" onclick="showPage('materials')">
+        <h3>Materials</h3>
+        <p id="materialCount">4</p>
+      </div>
+
+      <div class="card">
+        <h3>Progress</h3>
+        <div class="progress-bg">
+          <div id="progressBar"></div>
+        </div>
+        <p id="progressText">60%</p>
+      </div>
+    </div>
+
+    <div id="pendingListBox" class="panel hidden">
+      <h2>Pending Assignment List</h2>
+      <div id="pendingList"></div>
+    </div>
+  </div>
+
+  <div id="tasks" class="page hidden">
+    <h1>Study Tasks for This Week</h1>
+
+    <input id="taskText" placeholder="Task name">
+    <input id="taskCourse" placeholder="Course">
+    <button onclick="addTask()">Add Task</button>
+
+    <div class="panel">
+      <h2>Weekly Study Task List</h2>
+      <div id="taskList"></div>
+    </div>
+  </div>
+
+  <div id="assignments" class="page hidden">
+    <h1>Assignments</h1>
+
+    <input id="assignmentTitle" placeholder="Assignment Title">
+    <input id="assignmentCourse" placeholder="Course">
+    <input id="assignmentDeadline" type="date">
+    <input id ="Progress action" type="number">
+    <button onclick="addAssignment()">Add Assignment</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Course</th>
+          <th>Deadline</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="assignmentTable"></tbody>
+    </table>
+  </div>
+
+  <div id="materials" class="page hidden">
+    <h1>Materials</h1>
+
+    <input id="materialTitle" placeholder="Material Title">
+    <input id="materialCourse" placeholder="Course">
+    <input id="materialFile" type="file">
+    <button onclick="uploadMaterial()">Upload Material</button>
+
+    <div class="panel">
+      <h2>Uploaded Materials</h2>
+      <div id="materialList"></div>
+    </div>
+  </div>
+
+  <div id="notifications" class="page hidden">
+    <h1>Notifications</h1>
+    <button onclick="markRead()">Mark All as Read</button>
+    <div id="notificationList" class="panel"></div>
+  </div>
+
+  <div id="profile" class="page hidden">
+  <h1>Profile</h1>
+
+  <div class="panel">
+    <p><b>Name:</b> <span id="profileName"></span></p>
+    <p><b>ID:</b> <span id="profileId"></span></p>
+    <p><b>Email:</b> <span id="profileEmail"></span></p>
+    <p><b>Department:</b> <span id="profileDepartment"></span></p>
+
+    <button onclick="showPage('settings')">Edit Profile</button>
+  </div>
+</div>
+  <div id="pendingPage" class="page hidden">
+  <h1>Pending Assignments</h1>
+  <div class="panel">
+    <div id="pendingAssignmentPageList"></div>
+  </div>
+</div>
+
+<div id="settings" class="page hidden">
+  <h1>Profile Settings</h1>
+
+  <div class="panel">
+    <input id="settingName" placeholder="Name">
+    <input id="settingId" placeholder="Student ID">
+    <input id="settingEmail" placeholder="Email">
+    <input id="settingDepartment" placeholder="Department">
+    <button onclick="updateProfile()">Save Profile</button>
+  </div>
+</div>
+<div id="signin" class="page hidden">
+  <h1>Sign In</h1>
+
+  <div class="panel">
+    <input id="signName" placeholder="Name">
+    <input id="signId" placeholder="Student ID">
+    <input id="signEmail" placeholder="Email">
+    <input id="signDepartment" placeholder="Department">
+    <input id="signPassword" type="password" placeholder="Password">
+
+    <button onclick="signIn()">Create Account</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
